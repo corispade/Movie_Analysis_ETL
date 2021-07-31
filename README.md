@@ -6,13 +6,13 @@ Amazing Prime loves the dataset and wants to keep it updated on a daily basis. B
 
 ## Process:
 
-Deliverable 1: Write an ETL Function to Read Three Data Files
+### Deliverable 1: Write an ETL Function to Read Three Data Files
 * Write an ETL function that reads in the three data files 
 * Function converts Wiki JSON file to a Pandas DataFrame
 * Function converts Kaggle metadata file to a Pandas DataFrame
 * Function converts MovieLens ratings data file to a Pandas DataFrame
 
-Deliverable 2: Extract and Transform the Wikipedia Data
+### Deliverable 2: Extract and Transform the Wikipedia Data
 * Add a "clean_movie" function that cleans the column names and merges duplicate columns
 * Add a "extract_transform_load" function that cleans the wikipedia data set
  - Read in the data
@@ -28,18 +28,28 @@ Deliverable 2: Extract and Transform the Wikipedia Data
  - Clean "running time" column: Convert to strings, extract the values, convert strings to numeric values, apply a function that converts hour and minute capture groups
  - Review the cleaned DataFrame
 
-Deliverable 3: Extract and Transform the Kaggle data
+### Deliverable 3: Extract and Transform the Kaggle data
+* Add a "clean_movie" function that cleans the column names and merges duplicate columns
+* Add a "extract_transform_load" function that cleans the wikipedia data set, kaggle metadata and ratings data set
+ - Wikipedia data set cleaned in deliverable 2
+ - Clean Kaggle metadata
+ - Merge Kaggle metadata and Wikipedia data into one DataFrame
+ - Clean merged dataframe by filling in missing values and dropping duplicate columns
+ - Rename and reorder columns to clean the look
+ - Transform the ratings data
+ - Merge ratings data with the combined Kaggle and Wikipedia DataFrame
+ - Fill in all missing values with "0"
 
-Deliverable 4: Create the Movie Database
+### Deliverable 4: Create the Movie Database
 
 ## Resources:
-Sources: 
+Sources: wikipedia-movies.json, movies_metadata.csv, ratings.csv
 
 Software: Python 3.7.6, Conda 4.10.1
 
 Environment: Jupyter Notebook
 
-Dependencies: 
+Dependencies: json, pandas, numpy, re, sqlalchemy, psychopg2, time
 
 
 # Results:
