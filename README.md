@@ -13,6 +13,20 @@ Deliverable 1: Write an ETL Function to Read Three Data Files
 * Function converts MovieLens ratings data file to a Pandas DataFrame
 
 Deliverable 2: Extract and Transform the Wikipedia Data
+* Add a "clean_movie" function that cleans the column names and merges duplicate columns
+* Add a "extract_transform_load" function that cleans the wikipedia data set
+ - Read in the data
+ - Filter out the TV shows
+ - Call the clean_movie function on each movie
+ - Read in the cleaned movies
+ - Create DataFrame from the cleaned movies
+ - Write try/except block to extract IMDB ID to strings, drop duplicates, and run an except statement to skip errors
+ - Keep columns that don't have null values in the DataFrame
+ - Clean "box office" column: Convert to strings, write a parse_dollars function to match strings otherwise return nan
+ - Clean "budget" column: Convert to strings, use regular expression to match common budget forms, extract those values
+ - Clean "release date" column: Convert to strings, use regular expression to match common date forms, use datetime function to parse the dates, extract the dates.
+ - Clean "running time" column: Convert to strings, extract the values, convert strings to numeric values, apply a function that converts hour and minute capture groups
+ - Review the cleaned DataFrame
 
 Deliverable 3: Extract and Transform the Kaggle data
 
