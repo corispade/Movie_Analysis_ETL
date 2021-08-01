@@ -2,7 +2,7 @@
 
 # Overview
 
-We refactored code to create an automated pipeline that takes in new data, performs the appropriate transformations, and loads the data into existing tables. We created one function that takes in three files (Wikipedia data, Kaggle metadata, and the MovieLens rating data) and performs the ETL process by adding the data to a PostgreSQL database.
+Developing an algorithm for Amazing Prime to predict which low budget movies being release will become popular so that they can buy the streaming rights at a bargain. We refactored code to create an automated pipeline that takes in new data, performs the appropriate transformations, and loads the data into existing tables. We created one function that takes in three files (Wikipedia data, Kaggle metadata, and the MovieLens rating data) and performs the ETL process by adding the data to a PostgreSQL database.
 
 ## Process:
 
@@ -61,4 +61,6 @@ Software: Python 3.7.6, Conda 4.10.1
 
 Environment: Jupyter Notebook
 
-Dependencies: json, pandas, numpy, re, sqlalchemy, psychopg2, time
+Database System: Postgres Version 12.7
+* Interface: PgAdmin Version 5.2
+* Language: SQL
