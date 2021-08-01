@@ -51,11 +51,11 @@ Find code [here](https://github.com/corispade/Movies_ETL/blob/main/ETL_create_da
 * Import movie_df to sql database
 * Import ratings data to sql database by chunk size and indicating time elapsed for importing data
 * Use PgAdmin to confirm data has been loaded to the database
-  - [movies_query](https://github.com/corispade/Movies_ETL/blob/main/movies_query.png) count = 6,052
-  - [ratings_query](https://github.com/corispade/Movies_ETL/blob/main/ratings_query.png) count = 26,024,289
+  - [movies_query](https://github.com/corispade/Movies_ETL/blob/main/Resources/movies_query.png) count = 6,052
+  - [ratings_query](https://github.com/corispade/Movies_ETL/blob/main/Resources/ratings_query.png) count = 26,024,289
 
 ## Resources:
-Sources: wikipedia-movies.json, movies_metadata.csv, ratings.csv
+Sources: [wikipedia-movies.json](https://github.com/corispade/Movies_ETL/blob/main/Resources/wikipedia-movies.json), [movies_metadata.csv](https://github.com/corispade/Movies_ETL/blob/main/Resources/movies_metadata.csv), ratings.csv
 
 Software: Python 3.7.6, Conda 4.10.1
 
