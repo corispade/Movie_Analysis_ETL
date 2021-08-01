@@ -2,7 +2,7 @@
 
 # Overview
 
-Developing an algorithm for Amazing Prime to predict which low budget movies being release will become popular so that they can buy the streaming rights at a bargain. We refactored code to create an automated pipeline that takes in new data, performs the appropriate transformations, and loads the data into existing tables. We created one function that takes in three files (Wikipedia data, Kaggle metadata, and the MovieLens rating data) and performs the ETL process by adding the data to a PostgreSQL database.
+Developing an algorithm for Amazing Prime to predict which low budget movies being released will become popular, so that they can buy the streaming rights at a bargain. We refactored code to create an automated pipeline that takes in new data, performs the appropriate transformations, and loads the data into existing tables. We created one function that takes in three files (Wikipedia data, Kaggle metadata, and the MovieLens rating data) and performs the ETL process by adding the data to a PostgreSQL database.
 
 ## Process:
 
@@ -35,21 +35,21 @@ Find code [here](https://github.com/corispade/Movies_ETL/blob/main/ETL_clean_kag
 * Add a "clean_movie" function from deliverable 2
 * Add a "extract_transform_load" function that cleans the wikipedia data set, kaggle metadata and ratings data set
   - Wikipedia data set cleaned in deliverable 2
-  - Clean Kaggle metadata
+  - Clean the Kaggle metadata
   - Merge Kaggle metadata and Wikipedia data into one DataFrame
-  - Clean merged dataframe by filling in missing values and dropping duplicate columns
-  - Rename and reorder columns to clean the look
+  - Clean merged DataFrame by filling in missing values and dropping duplicate columns
+  - Rename and reorder columns to clean the look of the DataFrame
   - Transform the ratings data
-  - Merge ratings data with the combined Kaggle and Wikipedia DataFrame
+  - Merge the ratings data with the combined Kaggle and Wikipedia DataFrame
   - Fill in all missing values with "0"
 
 ### Deliverable 4: Create the Movie Database
 Find code [here](https://github.com/corispade/Movies_ETL/blob/main/ETL_create_database.ipynb)
 * Add a "clean_movie" function from deliverable 2
 * Add a "extract_transform_load" function from deliverable 3
-* Connect to postresql database
-* Import movie_df to sql
-* Import ratings data to sql by chunk size and indicating time elapsed for importing data
+* Connect to PostgreSQL database
+* Import movie_df to sql database
+* Import ratings data to sql database by chunk size and indicating time elapsed for importing data
 * Use PgAdmin to confirm data has been loaded to the database
   - [movies_query](https://github.com/corispade/Movies_ETL/blob/main/movies_query.png) count = 6,052
   - [ratings_query](https://github.com/corispade/Movies_ETL/blob/main/ratings_query.png) count = 26,024,289
