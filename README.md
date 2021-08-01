@@ -1,18 +1,20 @@
-# Movies_ETL
+# Extract, Transform and Load
 
 # Overview
 
-Amazing Prime loves the dataset and wants to keep it updated on a daily basis. Britta needs your help to create an automated pipeline that takes in new data, performs the appropriate transformations, and loads the data into existing tables. You’ll need to refactor the code from this module to create one function that takes in the three files—Wikipedia data, Kaggle metadata, and the MovieLens rating data—and performs the ETL process by adding the data to a PostgreSQL database.
+We refactored code to create an automated pipeline that takes in new data, performs the appropriate transformations, and loads the data into existing tables. We created one function that takes in three files (Wikipedia data, Kaggle metadata, and the MovieLens rating data) and performs the ETL process by adding the data to a PostgreSQL database.
 
 ## Process:
 
 ### Deliverable 1: Write an ETL Function to Read Three Data Files
+Find code [here](https://github.com/corispade/Movies_ETL/blob/main/ETL_function_test.ipynb).
 * Write an ETL function that reads in the three data files 
 * Function converts Wiki JSON file to a Pandas DataFrame
 * Function converts Kaggle metadata file to a Pandas DataFrame
 * Function converts MovieLens ratings data file to a Pandas DataFrame
 
 ### Deliverable 2: Extract and Transform the Wikipedia Data
+Find code [here](https://github.com/corispade/Movies_ETL/blob/main/ETL_clean_wiki_movies.ipynb).
 * Add a "clean_movie" function that cleans the column names and merges duplicate columns
 * Add a "extract_transform_load" function that cleans the wikipedia data set
   - Read in the data
@@ -29,6 +31,7 @@ Amazing Prime loves the dataset and wants to keep it updated on a daily basis. B
   - Review the cleaned DataFrame
 
 ### Deliverable 3: Extract and Transform the Kaggle data
+Find code [here](https://github.com/corispade/Movies_ETL/blob/main/ETL_clean_kaggle_data.ipynb)
 * Add a "clean_movie" function from deliverable 2
 * Add a "extract_transform_load" function that cleans the wikipedia data set, kaggle metadata and ratings data set
   - Wikipedia data set cleaned in deliverable 2
@@ -41,12 +44,15 @@ Amazing Prime loves the dataset and wants to keep it updated on a daily basis. B
   - Fill in all missing values with "0"
 
 ### Deliverable 4: Create the Movie Database
+Find code [here](https://github.com/corispade/Movies_ETL/blob/main/ETL_create_database.ipynb)
 * Add a "clean_movie" function from deliverable 2
 * Add a "extract_transform_load" function from deliverable 3
 * Connect to postresql database
 * Import movie_df to sql
 * Import ratings data to sql by chunk size and indicating time elapsed for importing data
 * Use PgAdmin to confirm data has been loaded to the database
+  - [movies_query](https://github.com/corispade/Movies_ETL/blob/main/movies_query.png) count = 6,052
+  - [ratings_query](https://github.com/corispade/Movies_ETL/blob/main/ratings_query.png) count = 26,024,289
 
 ## Resources:
 Sources: wikipedia-movies.json, movies_metadata.csv, ratings.csv
@@ -56,10 +62,3 @@ Software: Python 3.7.6, Conda 4.10.1
 Environment: Jupyter Notebook
 
 Dependencies: json, pandas, numpy, re, sqlalchemy, psychopg2, time
-
-
-# Results:
-
-
-
-# Summary:
